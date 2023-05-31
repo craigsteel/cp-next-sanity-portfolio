@@ -1,8 +1,10 @@
+import { apiVersion, dataset, projectId } from '../../sanity/sanity.api'
+
 const config = {
-  projectId: 'slsisqvg',
-	dataset: 'production',
-	apiVersion: '2023-05-27',
-	useCdn: true,
+	projectId: projectId || '',
+  dataset: dataset || '',
+  apiVersion: apiVersion || '',
+  useCdn: true,
 };
 
 export default config

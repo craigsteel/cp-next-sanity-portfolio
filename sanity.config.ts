@@ -1,17 +1,32 @@
 import { defineConfig } from "sanity"
 import { deskTool } from "sanity/desk"
+import { apiVersion, dataset, previewSecretId, projectId } from './sanity/sanity.api'
 import schemas from "./sanity/schemas"
+import {cloudinaryAssetSourcePlugin, cloudinarySchemaPlugin} from 'sanity-plugin-cloudinary'
+
+const title =
+  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
+  'craig Parfitt UI/UX Design Portfolio'
 
 const config = defineConfig({
 
-  title: 'craig Parfitt New Portfolio',
-  projectId: 'slsisqvg',
-  dataset: 'production',
-  apiVersion: '2023-05-27',
+  projectId: projectId || '',
+  dataset: dataset || '',
+  title,
+
+  apiVersion: apiVersion || '',
+  useCdn: true,
 
   basePath: '/studio',
 
-  plugins: [deskTool()],
+  plugins: [
+    deskTool(),
+
+    cloudinaryAssetSourcePlugin(),
+    /*...*/
+    cloudinarySchemaPlugin(),
+  ],
+
   schema: { types: schemas }
 
 })

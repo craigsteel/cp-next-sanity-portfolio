@@ -2,6 +2,7 @@ import Link from 'next/link'
 import '../globals.css'
 import { Open_Sans } from 'next/font/google'
 import { getPages } from '@/sanity/sanity-utils'
+import Footer from '@/components/Footer'
 
 const open_Sans = Open_Sans({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+
       <body className='text-white max-w-6xl mx-auto md:py-10 centered bg-gradient-to-tr from-black from-25% via-blue-900 via-60% to-blue-950'>
 
         <header className='flex item-center justify-between'>
@@ -28,20 +30,32 @@ export default async function RootLayout({
             Craig Parfitt UI/UX Designer  -  0786 656 2170
           </Link>
 
-          <div className='flex gap-10 text-lg'>
+          <div className='flex gap-4 text-lg opacity-70 hover:opacity-100 transition duration-300'>
             {pages.map((page) => (
               <Link
                 key={page._id}
                 href={`/${page.slug}`}
-                className='opacity-70 hover:opacity-100 transition duration-300'>
+                className='text-lg opacity-70 hover:opacity-100 transition duration-300'>
                   {page.title}
               </Link>
             ))}
+              <a href="mailto:craig@craigsteel-design.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className='text-lg opacity-70 hover:opacity-100 transition duration-300'>
+                contact
+              </a>
+
           </div>
 
         </header>
 
-        <main className='py-20'>{children}</main>
+        <main className='py-20'>
+          {children}
+        </main>
+
+          <Footer />
+
       </body>
     </html>
   )

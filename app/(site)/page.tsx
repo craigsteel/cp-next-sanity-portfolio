@@ -3,8 +3,6 @@ import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-
-
 export default async function Home() {
 
   const projects = await getProjects();
@@ -27,7 +25,8 @@ export default async function Home() {
 
           {projects.map((project) => (
 
-            <div key={project._id} className='relative bg-gradient-to-tr from-black from-25% via-blue-900 via-60% to-slate-950 flex opacity-70 hover:opacity-100 hover:drop-shadow-[0_0px_40px_rgba(0,0,205,0.4)] rounded-lg p-5 my-20 hover:scale-105 transition duration-200 ease-in-out'>
+            <div key={project._id}
+                className='relative bg-gradient-to-tr from-black from-25% via-blue-900 via-60% to-slate-950 flex opacity-70 hover:opacity-100 hover:drop-shadow-[0_0px_40px_rgba(0,0,205,0.4)] rounded-lg p-5 my-20 hover:scale-105 transition duration-200 ease-in-out'>
 
               <div className='w-1/3 flex flex-col'>
 
@@ -40,16 +39,19 @@ export default async function Home() {
                 </h2>
 
                 <div className="text-sm pr-10">
-                <PortableText
-                  value={project.content}>
-                  </PortableText>
+                  <PortableText
+                    value={project.content}
+                    onMissingComponent={(message, options) => {
+                }} />
                 </div>
 
-                  <Link className='absolute bottom-10 left-5' href={`/projects/${project.slug}`}>
-                    <p className='font-light text-sm opacity-60 hover:opacity-100 hover:font-medium bottom'>
-                      Read the full story
-                    </p>
-                  </Link>
+                <Link className='absolute bottom-10 left-5'
+                  href={`/projects/${project.slug}`}>
+                  <p className='font-light text-sm opacity-60 hover:opacity-100 hover:font-medium bottom'>
+                    Read the full story
+                  </p>
+                </Link>
+
               </div>
                 <div className='bottom-[-40px] right-[-50px] absolute z-10 opacity-100 drop-shadow-[0_0px_10px_rgba(0,0,0,0.4)]'>
                   {project.mobile && (
@@ -58,6 +60,7 @@ export default async function Home() {
                       alt={project.name}
                       width={213}
                       height={440}
+                      loading="lazy"
                       className="object-cover rounded-lg transition duration-200 ease-in-out"
                     />
                   )}
@@ -70,6 +73,7 @@ export default async function Home() {
                       alt={project.name}
                       width={902}
                       height={508}
+                      loading="lazy"
                       className="object-cover rounded-lg transition duration-200 ease-in-out"
                     />
                   )}

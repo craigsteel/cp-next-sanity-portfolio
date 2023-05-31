@@ -1,4 +1,4 @@
-import { getPage } from "@/sanity/sanity-utils";
+import { getPage, getPages } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 
 type Props = {
@@ -16,6 +16,7 @@ export default async function Page({ params }: Props) {
             </h1>
 
             <PortableText value={page.content} />
+
         </div>
     )
 }

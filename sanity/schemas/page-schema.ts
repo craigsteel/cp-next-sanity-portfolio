@@ -27,6 +27,20 @@ const page = {
                 },
             ],
         },
+        {
+            name: 'cloudinary',
+            title: 'Cloudinary Video',
+            description: 'This asset is served from Cloudinary',
+            type: 'array',
+            of: [
+                {
+                    type: "cloudinary.asset",
+                    name: "name",
+                    title: "title",
+                    description: "description",
+                },
+            ],
+        },
     ],
 }
 
