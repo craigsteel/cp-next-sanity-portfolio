@@ -1,6 +1,6 @@
 import { defineConfig } from "sanity"
 import { deskTool } from "sanity/desk"
-import { apiVersion, dataset, previewSecretId, projectId } from './sanity/sanity.api'
+import { apiVersion, dataset, projectId } from './sanity/sanity.api'
 import schemas from "./sanity/schemas"
 import {cloudinaryAssetSourcePlugin, cloudinarySchemaPlugin} from 'sanity-plugin-cloudinary'
 
