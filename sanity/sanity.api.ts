@@ -5,7 +5,7 @@ export const useCdn = process.env.NODE_ENV === 'production'
  * Importing other npm packages here could lead to needlessly increasing the client bundle size, or end up in a server-only function that don't need it.
  */
 
-export const projectId = process.env.SANITY_PROJECT_ID
+export const projectId = process.env.SANITY_STUDIO_PROJECT_ID
 export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
 
 // see https://www.sanity.io/docs/api-versioning for how versioning works

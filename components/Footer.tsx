@@ -31,7 +31,7 @@ export default function Footer() {
 
      <div className="flex space-x-5 py-5">
       <SocialIcon
-        url="https://github.com/craigsteel/csportfolio"
+        url="https://github.com/craigsteel/cp-next-sanity-portfolio"
         target="_blank"
         rel="noopener noreferrer"
         style={
