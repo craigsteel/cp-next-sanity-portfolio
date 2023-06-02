@@ -1,9 +1,12 @@
-import { apiVersion, dataset, projectId } from '../../sanity/sanity.api'
+import { apiVersion, dataset, projectId, cloudinaryApiKey, cloudinaryName} from '../../sanity/sanity.api'
 
 const config = {
-	projectId: projectId || '',
-  dataset: dataset || '',
-  apiVersion: apiVersion || '',
+  projectId,
+  dataset,
+  apiVersion,
+  cloudinaryApiKey,
+  cloudinaryName,
+
   useCdn: true,
 };
 

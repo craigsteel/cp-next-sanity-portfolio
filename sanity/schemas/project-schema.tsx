@@ -25,12 +25,12 @@ const project = {
 		type: 'image',
 		options: { hotspot: true },
 			fields: [
-			{
-			name: 'alt',
-			title: 'Alt',
-			type: 'string'
-			}
-		]
+				{
+				name: 'alt',
+				title: 'Alt',
+				type: 'string'
+				}
+			]
     },
     {
 		name: 'mobile',
@@ -52,8 +52,14 @@ const project = {
 		name: 'url',
 		title: 'URL',
 		type: 'url',
-    },
-    {
+	  },
+	  {
+		  name: 'adobeXD',
+		  title: 'Adobe XD Link',
+		  type: 'url',
+		  description: 'This is a link to the Adobe XD Mockup'
+	  },
+	{
 		name: 'content',
 		title: 'Content',
 		type: 'array',
@@ -62,8 +68,22 @@ const project = {
 				type: 'block',
 				}
 			]
-    }
-  ]
+		},
+    {
+    name: 'cloudinary',
+    title: 'Cloudinary Video',
+    description: 'This asset is served from Cloudinary',
+    type: 'array',
+    	of: [
+				{
+				type: "cloudinary.asset",
+				name: "name",
+				title: "title",
+				description: "description",
+				},
+			],
+		},
+	]
 }
 
 export default project;

@@ -15,5 +15,10 @@
         @apply py-2;
     }
 
-    /* ... */
+    p {
+        @apply leading-[24px];
+        @apply text-[12px];
+
+    }
+  /* ... */
 }

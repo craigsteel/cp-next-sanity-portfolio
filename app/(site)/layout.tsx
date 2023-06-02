@@ -3,6 +3,8 @@ import '../globals.css'
 import { Open_Sans } from 'next/font/google'
 import { getPages } from '@/sanity/sanity-utils'
 import Footer from '@/components/Footer'
+import { SocialIcon } from 'react-social-icons'
+import Navbar from '@/components/Navbar'
 
 const open_Sans = Open_Sans({ subsets: ['latin'] })
 
@@ -13,44 +15,18 @@ export const metadata = {
 
 export default async function RootLayout({
   children,
-}: {
+  }: {
     children: React.ReactNode;
   }) {
-
-  const pages = await getPages();
 
   return (
     <html lang="en">
 
-      <body className='text-white max-w-6xl mx-auto md:py-10 centered bg-gradient-to-tr from-black from-25% via-blue-900 via-60% to-blue-950'>
+      <body className='text-white max-w-6xl mx-auto md:py-10 centered bg-gradient-to-tr from-slate-950 from-40% via-blue-950 via-60% to-slate-950'>
 
-        <header className='flex item-center justify-between'>
-          <Link href="/"
-            className='mb-10 text-lg opacity-70 hover:opacity-100 transition duration-300'>
-            Craig Parfitt UI/UX Designer  -  0786 656 2170
-          </Link>
+        <Navbar />
 
-          <div className='flex gap-4 text-lg opacity-70 hover:opacity-100 transition duration-300'>
-            {pages.map((page) => (
-              <Link
-                key={page._id}
-                href={`/${page.slug}`}
-                className='text-lg opacity-70 hover:opacity-100 transition duration-300'>
-                  {page.title}
-              </Link>
-            ))}
-              <a href="mailto:craig@craigsteel-design.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className='text-lg opacity-70 hover:opacity-100 transition duration-300'>
-                contact
-              </a>
-
-          </div>
-
-        </header>
-
-        <main className='py-20'>
+        <main className='py-10'>
           {children}
         </main>
 

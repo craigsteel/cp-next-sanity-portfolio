@@ -16,7 +16,9 @@ export async function getProjects(): Promise<Project[]> {
 			"image": image.asset->url,
 			"mobile": mobile.asset->url,
 			url,
-			content
+			content,
+			public_id,
+			cloudinary,
 		}`
 	)
 }
@@ -33,7 +35,9 @@ export async function getProject(slug: string): Promise<Project> {
 			"image": image.asset->url,
 			"mobile": mobile.asset->url,
 			url,
-			content
+			content,
+			public_id,
+			cloudinary,
 		}`,
 		{ slug }
 	);
@@ -46,6 +50,10 @@ export async function getPages(): Promise<Page[]> {
 			_createdAt,
 			title,
 			"slug": slug.current,
+			"image": image.asset->url,
+			"mobile": mobile.asset->url,
+			url,
+			content,
 		}`
 	)
 }
@@ -58,7 +66,10 @@ export async function getPage(slug: string): Promise<Page> {
 			_createdAt,
 			title,
 			"slug": slug.current,
-			content
+			"image": image.asset->url,
+			"mobile": mobile.asset->url,
+			url,
+			content,
 		}`,
 		{ slug }
 	);

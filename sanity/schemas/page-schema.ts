@@ -28,18 +28,17 @@ const page = {
             ],
         },
         {
-            name: 'cloudinary',
-            title: 'Cloudinary Video',
-            description: 'This asset is served from Cloudinary',
-            type: 'array',
-            of: [
-                {
-                    type: "cloudinary.asset",
-                    name: "name",
-                    title: "title",
-                    description: "description",
-                },
-            ],
+        name: 'showcaseProjects',
+        title: 'Showcase projects',
+        description:
+            'These are the projects that will appear first on your landing page.',
+        type: 'array',
+        of: [
+            {
+            type: 'reference',
+            to: [{ type: 'project' }],
+            },
+        ],
         },
     ],
 }

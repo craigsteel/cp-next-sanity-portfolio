@@ -1,7 +1,10 @@
+import Header from '@/components/Header';
 import { getProjects } from '@/sanity/sanity-utils';
 import { PortableText } from '@portabletext/react';
+import { CldVideoPlayer } from 'next-cloudinary';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaChevronRight } from 'react-icons/fa';
 
 export default async function Home() {
 
@@ -11,26 +14,16 @@ export default async function Home() {
 
       <div>
 
-        <h1 className='text-3xl font-extrabold md:leading-tight md:text-7xl pb-4 tracking-wide'>
-          <span>Hi, I&apos;m Craig and thanks for visiting my portfolio which focuses on UI/UX Design.</span>
-        </h1>
-
-        <p className='font-light text-2xl leading-10'>
-          I am a multidisciplinary UI/UX creative based in the UK. With a background of over 20 years in branding, corporate and web design, I bring a wealth of experience and knowledge to each project that can help clients to identify and solve their communication problems, creating a better and more enjoyable online user experience.
-        </p>
-
-        <h2 className='mt-4 font-light text-gray-400 text-xl pl-5 pt-5'>
-          FEATURED PROJECTS
-        </h2>
+        <Header />
 
           {projects.map((project) => (
 
             <div key={project._id}
-                className='relative bg-gradient-to-tr from-black from-25% via-blue-900 via-60% to-slate-950 flex opacity-70 hover:opacity-100 hover:drop-shadow-[0_0px_40px_rgba(0,0,205,0.4)] rounded-lg p-5 my-20 hover:scale-105 transition duration-200 ease-in-out'>
+                className='relative bg-gradient-to-tr from-slate-900 from-10% via-blue-950 via-50% to-slate-950 flex opacity-70 hover:opacity-100 hover:drop-shadow-[0_0px_70px_rgba(0,0,0,1)] rounded-lg p-5 my-20 hover:scale-105 transition duration-500 ease-in-out'>
 
               <div className='w-1/3 flex flex-col'>
 
-                <h2 className='uppercase text-2xl font-extralight'>
+                <h2 className='uppercase text-2xl pb-3 font-extralight'>
                   {project.number}
                 </h2>
 
@@ -38,30 +31,30 @@ export default async function Home() {
                   {project.name}
                 </h2>
 
-                <div className="text-sm pr-10">
+                <div className="pr-16">
                   <PortableText
-                    value={project.content}
-                    onMissingComponent={(message, options) => {
-                }} />
+                    value={project.content} />
+
                 </div>
 
-                <Link className='absolute bottom-10 left-5'
+                <Link className='text-sm flex items-center space-x-2 absolute bottom-10 left-5 opacity-60 hover:opacity-100 bottom transition duration-200 ease-in-out'
                   href={`/projects/${project.slug}`}>
-                  <p className='font-light text-sm opacity-60 hover:opacity-100 hover:font-medium bottom'>
-                    Read the full story
-                  </p>
+                  <p className='font-light'>
+                    Read the full story</p> <FaChevronRight className='pt-1'/>
                 </Link>
 
               </div>
-                <div className='bottom-[-40px] right-[-50px] absolute z-10 opacity-100 drop-shadow-[0_0px_10px_rgba(0,0,0,0.4)]'>
+
+                <div className='bottom-[-30px] right-[-40px] absolute z-10'>
                   {project.mobile && (
                     <Image
                       src={project.mobile}
                       alt={project.name}
-                      width={213}
-                      height={440}
+                      width={190}
+                      height={393}
                       loading="lazy"
-                      className="object-cover rounded-lg transition duration-200 ease-in-out"
+                      quality={100}
+                      className="object-cover rounded-lg drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]"
                     />
                   )}
               </div>
@@ -73,16 +66,14 @@ export default async function Home() {
                       alt={project.name}
                       width={902}
                       height={508}
+                      quality={100}
                       loading="lazy"
-                      className="object-cover rounded-lg transition duration-200 ease-in-out"
+                      className="object-cover rounded-lg drop-shadow-[0px_10px_10px_rgba(0,0,0,0.8)]"
                     />
                   )}
                 </div>
-
               </div>
-
           ))}
-
         </div>
   );
 }
