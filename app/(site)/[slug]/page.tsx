@@ -3,7 +3,6 @@ import { getPage, getProjects, getPages, getProject } from "@/sanity/sanity-util
 import { PortableText } from "@portabletext/react";
 import Link from "next/link";
 import Image from 'next/image';
-import { FaChevronRight } from "react-icons/fa";
 
 type Props = {
     params: { slug: string }
