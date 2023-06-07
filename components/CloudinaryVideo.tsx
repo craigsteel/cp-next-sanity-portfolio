@@ -1,11 +1,19 @@
-import { getProjects } from "@/sanity/sanity-utils";
-import project from "@/sanity/schemas/project-schema";
-import { PortableText } from "@portabletext/react";
+"use client"
+import { cloudinaryApiSecret, cloudinaryApiKey, cloudinaryName} from './../sanity/sanity.api'
+import project from "@/sanity/schemas/Project";
 import "cloudinary-video-player/dist/cld-video-player.min.css";
 import { CldVideoPlayer } from 'next-cloudinary';
+import { }
 
+type Props = {};
 
-export default async function cloudinaryVideo() {
+export default function cloudinaryVideo({ }: Props) {
+
+	type source = {
+		id: 'cloudinaryApiKey',
+		name: 'cloudinaryName',
+	}
+
 
 	return (
 		<CldVideoPlayer
@@ -15,6 +23,6 @@ export default async function cloudinaryVideo() {
 			height={518}
 			quality={""}
 			className="object-cover rounded-lg transition duration-200 ease-in-out"
-			/>
-		);
-	}
+		/>
+	);
+}

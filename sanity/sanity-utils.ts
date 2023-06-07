@@ -1,8 +1,7 @@
-import { Project } from "@/types/Project";
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
-import { Page } from "@/types/Page";
-
+import { Project } from "@/types/project";
+import { Page } from "@/types/page";
 
 export async function getProjects(): Promise<Project[]> {
 
@@ -13,7 +12,10 @@ export async function getProjects(): Promise<Project[]> {
 			number,
 			name,
 			"slug": slug.current,
+			"projectImages": image.asset->url,
 			"image": image.asset->url,
+			"imagetwo": imagetwo.asset->url,
+			"imagethree": imagethree.asset->url,
 			"mobile": mobile.asset->url,
 			url,
 			content,
@@ -32,7 +34,10 @@ export async function getProject(slug: string): Promise<Project> {
 			number,
 			name,
 			"slug": slug.current,
+			"projectImages": image.asset->url,
 			"image": image.asset->url,
+			"imagetwo": imagetwo.asset->url,
+			"imagethree": imagethree.asset->url,
 			"mobile": mobile.asset->url,
 			url,
 			content,
@@ -51,6 +56,8 @@ export async function getPages(): Promise<Page[]> {
 			title,
 			"slug": slug.current,
 			"image": image.asset->url,
+			"imagetwo": imagetwo.asset->url,
+			"imagethree": imagethree.asset->url,
 			"mobile": mobile.asset->url,
 			url,
 			content,
@@ -67,6 +74,8 @@ export async function getPage(slug: string): Promise<Page> {
 			title,
 			"slug": slug.current,
 			"image": image.asset->url,
+			"imagetwo": imagetwo.asset->url,
+			"imagethree": imagethree.asset->url,
 			"mobile": mobile.asset->url,
 			url,
 			content,

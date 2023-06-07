@@ -17,8 +17,13 @@
 
     p {
         @apply leading-[24px];
-        @apply text-[12px];
+        @apply text-[14px];
 
     }
-  /* ... */
+}
+@layer components {
+
+    .projectButton {
+        @apply absolute flex items-center left-5 p-2 rounded space-x-2 opacity-60 hover:opacity-100 bg-slate-950/40 hover:bg-slate-950/80 transition duration-300 ease-in-out
+    }
 }

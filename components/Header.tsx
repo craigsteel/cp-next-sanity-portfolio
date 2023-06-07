@@ -1,12 +1,13 @@
 "use client"
+
 import React from 'react'
-import PropTypes from 'prop-types'
 import { motion } from 'framer-motion';
 
+type Props = {};
 
-export default function Header() {
+export default function Header({ }: Props) {
+
 	return (
-
 		<motion.div
         initial={{
           x: -100,
@@ -20,7 +21,8 @@ export default function Header() {
         }}
         transition={{
           duration: 1.5,
-        }}>
+      }}>
+      <div className='mx-10'>
 			<h1 className='text-3xl font-extrabold md:text-6xl md:mr-[65px] uppercase pb-4 leading-normal tracking-wide'>
 				<span>Hi, I&apos;m Craig and thanks for visiting my portfolio which focuses on UI/UX Design.</span>
 			</h1>
@@ -32,6 +34,8 @@ export default function Header() {
 			<h2 className='mt-4 font-light text-gray-400 text-xl pl-5 pt-5'>
 				FEATURED PROJECTS
 			</h2>
+      </div>
+
 			</motion.div>
 
   );

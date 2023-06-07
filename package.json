@@ -11,8 +11,11 @@
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.10.0",
-    "@portabletext/react": "^3.0.0",
+    "@portabletext/react": "^3.0.2",
+    "@sanity/components": "^2.2.6",
+    "@sanity/core": "^2.8.0",
     "@sanity/image-url": "^1.0.2",
+    "@sanity/production-preview": "^2.2.6",
     "@sanity/vision": "3.11.1",
     "@types/node": "20.2.5",
     "@types/react": "18.2.7",
@@ -21,20 +24,25 @@
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.16",
+    "get-youtube-id": "^1.0.1",
     "next": "13.4.4",
     "next-cloudinary": "^4.10.1",
     "next-sanity": "^4.3.3",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "18.2.0",
     "react-icons": "^4.9.0",
     "react-social-icons": "^5.15.0",
-    "sanity": "^3.11.3",
+    "react-youtube": "^10.1.0",
+    "sanity": "^3.11.5",
     "sanity-plugin-cloudinary": "^1.1.1",
     "typescript": "5.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
+    "sanity-codegen": "^0.9.8",
     "tailwindcss": "^3.3.2"
   }
 }

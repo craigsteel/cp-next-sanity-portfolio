@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 
 import React from 'react'
 import Link from 'next/link';
@@ -7,12 +6,14 @@ import { SocialIcon } from 'react-social-icons';
 import { getPages } from '@/sanity/sanity-utils';
 import { motion } from "framer-motion"
 
+type Props = {};
 
-export default async function Navbar() {
+export default async function Navbar({}: Props) {
 
 	const pages = await getPages();
 
-    return (
+  return (
+
       <motion.div
         initial={{
           x: -100,
@@ -40,7 +41,7 @@ export default async function Navbar() {
               key={page._id}
               href={`/${page.slug}`}
               className='text-lg opacity-70 hover:opacity-100 transition duration-300'>
-              {page.title}
+              Projects
             </Link>
           ))}
 

@@ -11,17 +11,15 @@ export default async function Home() {
   const projects = await getProjects();
 
     return (
-
       <div>
 
         <Header />
 
           {projects.map((project) => (
-
             <div key={project._id}
-                className='relative bg-gradient-to-tr from-slate-900 from-10% via-blue-950 via-50% to-slate-950 flex opacity-70 hover:opacity-100 hover:drop-shadow-[0_0px_70px_rgba(0,0,0,1)] rounded-lg p-5 my-20 hover:scale-105 transition duration-500 ease-in-out'>
+                className='relative rounded-lg p-5 my-20 ml-10 mr-20 bg-gradient-to-tr from-slate-900 from-10% via-blue-950 via-50% to-blue-950 flex opacity-70 hover:opacity-100 hover:drop-shadow-[0_0px_70px_rgba(0,0,0,1)] hover:scale-105 transition duration-500 ease-in-out'>
 
-              <div className='w-1/3 flex flex-col'>
+              <div className='w-1/3 flex flex-col pr-10'>
 
                 <h2 className='uppercase text-2xl pb-3 font-extralight'>
                   {project.number}
@@ -31,16 +29,14 @@ export default async function Home() {
                   {project.name}
                 </h2>
 
-                <div className="pr-16">
+                <div className="text-[14px] pb-14 ">
                   <PortableText
                     value={project.content} />
-
                 </div>
 
-                <Link className='text-sm flex items-center space-x-2 absolute bottom-10 left-5 opacity-60 hover:opacity-100 bottom transition duration-200 ease-in-out'
+                <Link className='projectButton bottom-5'
                   href={`/projects/${project.slug}`}>
-                  <p className='font-light'>
-                    Read the full story</p> <FaChevronRight className='pt-1'/>
+                <p className='text-sm'>Read the full story</p>
                 </Link>
 
               </div>

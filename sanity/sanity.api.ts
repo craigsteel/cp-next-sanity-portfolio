@@ -9,6 +9,7 @@ export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
 export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
 export const cloudinaryName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME!;
 export const cloudinaryApiKey = process.env.CLOUDINARY_API_KEY!;
+export const cloudinaryApiSecret = process.env.CLOUDINARY_API_SECRET!;
 
 // This is the document id used for the preview secret that's stored in your dataset.
 // The secret protects against unauthorized access to your draft content and have a lifetime of 60 minutes, to protect against bruteforcing.

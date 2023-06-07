@@ -1,11 +1,15 @@
+"use client"
+
 import { SocialIcon } from "react-social-icons"
 
 type Props = {}
-export default function Footer({}: Props) {
-return (
 
-<div className="flex flex-col p3 opacity-60">
-  <div className=" relative p3">
+export default function Footer({ }: Props) {
+
+  return (
+
+  <div className="flex flex-col p-3 opacity-60">
+    <div className=" relative p-3">
 
     <div className="text-[16px]">
       CRAIG PARFITT - 0786 656 2170
