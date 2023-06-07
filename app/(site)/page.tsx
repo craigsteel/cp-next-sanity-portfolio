@@ -1,10 +1,8 @@
 import Header from '@/components/Header';
 import { getProjects } from '@/sanity/sanity-utils';
 import { PortableText } from '@portabletext/react';
-import { CldVideoPlayer } from 'next-cloudinary';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaChevronRight } from 'react-icons/fa';
 
 export default async function Home() {
 
