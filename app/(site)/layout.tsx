@@ -4,7 +4,7 @@ import { Open_Sans } from 'next/font/google'
 import { getPages } from '@/sanity/sanity-utils'
 import Footer from '@/components/Footer'
 import { SocialIcon } from 'react-social-icons'
-import BlogNavbar from '@/components/BlogNavbar'
+import NavBarResponsive from '@/components/NavBarResponsive'
 
 const open_Sans = Open_Sans({ subsets: ['latin'] })
 
@@ -22,8 +22,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
 
-      <body className='text-white max-w-6xl mx-auto md:py-10 centered bg-gradient-to-tr from-slate-950 from-40% via-blue-950 via-60% to-slate-950'>
-        <BlogNavbar />
+      <body className='text-white items-center justify-center md:py-10 md:mx-20 bg-gradient-to-tr from-slate-950 from-40% via-blue-950 via-60% to-slate-950'>
+
+        <NavBarResponsive />
 
         <main className='py-10'>
           {children}

@@ -11,6 +11,8 @@
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.10.0",
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
     "@portabletext/react": "^3.0.2",
     "@sanity/components": "^2.2.6",
     "@sanity/core": "^2.8.0",
@@ -25,6 +27,7 @@
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.16",
     "get-youtube-id": "^1.0.1",
+    "mdb-react-ui-kit": "^6.1.0",
     "next": "13.4.4",
     "next-cloudinary": "^4.10.1",
     "next-sanity": "^4.3.3",

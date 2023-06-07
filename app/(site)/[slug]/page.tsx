@@ -20,9 +20,9 @@ export default async function allProjects({ params }: Props) {
     <>
       <div className="w-full m-10">
       <h1 className="text-xl text-white uppercase font-light">
-        {page.title}
+        {/* {page.title} */}
       </h1>
-      <PortableText value={page.content} />
+      {/* <PortableText value={page.content} /> */}
     </div>
 
         <div className="grid gap-20 grid-cols-2 m-10">
