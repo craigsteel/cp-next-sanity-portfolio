@@ -1,5 +1,5 @@
-import project from "./project"
-import page from "./page"
+import project from "./Project"
+import page from "./Page"
 import settings from "./settings"
 import youtube from "./youtube"
 import projectImages from "./projectImages"
