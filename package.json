@@ -20,7 +20,7 @@
     "@sanity/production-preview": "^2.2.6",
     "@sanity/vision": "3.11.1",
     "@types/node": "20.2.5",
-    "@types/react": "18.2.7",
+    "@types/react": "^18.2.9",
     "@types/react-dom": "18.2.4",
     "cloudinary-video-player": "^1.9.9",
     "eslint": "8.41.0",
