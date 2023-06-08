@@ -29,12 +29,12 @@ const config = defineConfig({
 
   basePath: '/studio',
 
-  schema: {
-    types: [
-      page,
-      project,
-    ],
-  },
+  // schema: {
+  //   types: [
+  //     page,
+  //     project,
+  //   ],
+  // },
 
   plugins: [
     deskTool(), visionTool(),
