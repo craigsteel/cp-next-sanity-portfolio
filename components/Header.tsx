@@ -22,7 +22,7 @@ export default function Header({ }: Props) {
         transition={{
           duration: 1.5,
       }}>
-      <div className='mx-10'>
+      <div className='mx-10 mt-16'>
 			<h1 className='text-3xl font-extrabold md:text-6xl md:mr-[65px] uppercase pb-4 leading-normal tracking-wide'>
 				<span>Hi, I&apos;m Craig and thanks for visiting my portfolio which focuses on UI/UX Design.</span>
 			</h1>

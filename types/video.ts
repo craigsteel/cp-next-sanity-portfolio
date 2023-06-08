@@ -10,5 +10,4 @@ export type Video = {
     alt: string;
     url: string;
     cloudinary: PortableTextBlock[];
-
 };

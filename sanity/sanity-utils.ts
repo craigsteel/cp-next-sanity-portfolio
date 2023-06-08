@@ -1,7 +1,9 @@
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
-import { Project } from "./../types/project";
-import { Page } from "./../types/page";
+import { Page } from "@/types/page";
+import { Project } from "@/types/project";
+
+
 
 export async function getProjects(): Promise<Project[]> {
 
@@ -11,16 +13,15 @@ export async function getProjects(): Promise<Project[]> {
 			_createdAt,
 			number,
 			name,
+			alt,
 			"slug": slug.current,
-			"projectImages": image.asset->url,
 			"image": image.asset->url,
 			"imagetwo": imagetwo.asset->url,
 			"imagethree": imagethree.asset->url,
 			"mobile": mobile.asset->url,
+			adobeXD,
 			url,
 			content,
-			public_id,
-			cloudinary,
 		}`
 	)
 }
@@ -33,16 +34,15 @@ export async function getProject(slug: string): Promise<Project> {
 			_createdAt,
 			number,
 			name,
+			alt,
 			"slug": slug.current,
-			"projectImages": image.asset->url,
 			"image": image.asset->url,
 			"imagetwo": imagetwo.asset->url,
 			"imagethree": imagethree.asset->url,
 			"mobile": mobile.asset->url,
+			adobeXD,
 			url,
 			content,
-			public_id,
-			cloudinary,
 		}`,
 		{ slug }
 	);
@@ -55,11 +55,6 @@ export async function getPages(): Promise<Page[]> {
 			_createdAt,
 			title,
 			"slug": slug.current,
-			"image": image.asset->url,
-			"imagetwo": imagetwo.asset->url,
-			"imagethree": imagethree.asset->url,
-			"mobile": mobile.asset->url,
-			url,
 			content,
 		}`
 	)
@@ -73,11 +68,6 @@ export async function getPage(slug: string): Promise<Page> {
 			_createdAt,
 			title,
 			"slug": slug.current,
-			"image": image.asset->url,
-			"imagetwo": imagetwo.asset->url,
-			"imagethree": imagethree.asset->url,
-			"mobile": mobile.asset->url,
-			url,
 			content,
 		}`,
 		{ slug }

@@ -24,7 +24,7 @@ export default async function allProjects({ params }: Props) {
       {/* <PortableText value={page.content} /> */}
     </div>
 
-        <div className="grid gap-20 grid-cols-2 m-10">
+        <div className="grid gap-20 md:grid-cols-2 m-10">
         {projects.map((project) => (
           <div key={project._id}
             className='relative hover:scale-105 transition duration-500 ease-in-out bg-gradient-to-tr from-black from-25% via-blue-900 via-60% to-slate-700 opacity-70 hover:opacity-100 hover:drop-shadow-[0_0px_40px_rgba(0,0,205,0.4)] rounded-lg p-5'>

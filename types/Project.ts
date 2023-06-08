@@ -6,14 +6,13 @@ export type Project = {
     number: string;
     name: string;
     slug: string;
-    projectImage: string;
     image: string;
+    projectImage: string;
     imagetwo: string;
     imagethree: string;
     mobile: string;
     alt: string;
     url: string;
     content: PortableTextBlock[];
-    cloudinary: PortableTextBlock[];
     adobeXD: string;
 };

@@ -5,8 +5,6 @@ import youtube from "./youtube"
 import projectImages from "./projectImages"
 import blockContent from "./blockContent"
 
-
-
 const schemas = [
   project,
   page,
