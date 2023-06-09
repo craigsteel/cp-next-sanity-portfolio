@@ -2,8 +2,6 @@ import { defineConfig } from "sanity"
 import { visionTool } from '@sanity/vision'
 import { deskTool } from "sanity/desk"
 import {cloudinaryAssetSourcePlugin, cloudinarySchemaPlugin} from 'sanity-plugin-cloudinary'
-import page from "./sanity/schemas/Page"
-import project from "./sanity/schemas/Project"
 
 const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION!;
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
