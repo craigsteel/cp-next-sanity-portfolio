@@ -2,6 +2,8 @@ import { defineConfig } from "sanity"
 import { visionTool } from '@sanity/vision'
 import { deskTool } from "sanity/desk"
 import {cloudinaryAssetSourcePlugin, cloudinarySchemaPlugin} from 'sanity-plugin-cloudinary'
+import schemas from "./sanity/schemas/schema";
+
 
 const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION!;
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
@@ -27,13 +29,6 @@ const config = defineConfig({
 
   basePath: '/studio',
 
-  // schema: {
-  //   types: [
-  //     page,
-  //     project,
-  //   ],
-  // },
-
   plugins: [
     deskTool(), visionTool(),
 
@@ -41,6 +36,9 @@ const config = defineConfig({
     /*...*/
     cloudinarySchemaPlugin(),
   ],
+
+schema: { types: schemas }
+
 })
 
 export default config;

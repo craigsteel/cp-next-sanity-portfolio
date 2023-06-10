@@ -59,11 +59,6 @@ export default defineType({
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: 'projectImage',
-      options: { hotspot: true },
-      name: 'projectImage'
-    },
-    {
       type: 'youtube',
       name: 'youtube',
     },

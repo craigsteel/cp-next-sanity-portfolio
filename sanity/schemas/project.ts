@@ -44,15 +44,12 @@ export default defineType({
 		title: 'List Project Images',
 		description: 'Displayed all Images for the project.',
 		type: 'array',
-			of: [
-				{
+			of: [{
 				title: 'Reference',
 				type: 'reference',
-				to: [
-					{
-					type: 'projectImage',
-					},
-				],
+				to: [{
+					type: 'projectImages',
+				}],
 				},
 			],
 		}),

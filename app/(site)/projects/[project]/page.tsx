@@ -47,7 +47,7 @@ export default async function Project({ params }: Props) {
 
 				<div className="z-10 px-5 mt-[-150px] drop-shadow-[0px_0px_90px_rgba(0,0,0,0.8)]">
 					<Image
-						src={project.imagetwo}
+						src={project.listProjectImages}
 						alt={project.name}
 						width={900}
 						height={508}

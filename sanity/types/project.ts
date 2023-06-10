@@ -7,7 +7,8 @@ export type Project = {
     name: string;
     slug: string;
     image: string;
-    projectImage: string;
+    projectImages: string;
+    listProjectImages: string;
     imagetwo: string;
     imagethree: string;
     mobile: string;
