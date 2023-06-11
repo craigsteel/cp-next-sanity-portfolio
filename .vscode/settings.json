@@ -4,8 +4,10 @@
         "bruteforcing",
         "cloudinary",
         "Codegen",
+        "colours",
         "craigsteel",
         "extralight",
+        "Finalise",
         "groq",
         "headlessui",
         "heroicons",
@@ -20,6 +22,7 @@
         "Photoshop",
         "portabletext",
         "slsisqvg",
-        "tailwindcss"
+        "tailwindcss",
+        "wireframes"
     ]
 }

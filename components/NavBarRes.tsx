@@ -16,7 +16,7 @@ function NavbarRes() {
 	useEffect(() => {
 		const changeColor = () => {
 			if (window.scrollY >= 90) {
-				setColor('#172352')
+				setColor('#010617')
 				setTextColor('#ffffff')
 			} else {
 				setColor('transparent')
@@ -28,13 +28,13 @@ function NavbarRes() {
 
 	return (
 		<div style={{backgroundColor: `${color}`}} className="fixed left-0 top-0 w-full z-10 ease-in-out duration-300">
-			<div className="max-w-[1240px] m-auto flex justify-between items-center p-6 text-white">
+			<div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
 
 					<ul style={{ color: `${textColor}` }} className="hidden sm:flex">
 					<li className="p-4">
 					<Link href="/">
-						<h1 style={{color: `${textColor}`}} className='text-lg md:pl-10 opacity-70 hover:opacity-100 transition duration-300'>
-        			Craig Parfitt UI/UX Designer  -  0786 656 2170 </h1>
+						<h1 style={{color: `${textColor}`}} className='text-lg md:pl-10 opacity-70 space-x-4 hover:opacity-100 transition duration-300'>
+        				<span>Craig Parfitt UI/UX Designer</span><span>-</span><span>0786 656 2170</span></h1>
 							</Link>
 							</li>
 

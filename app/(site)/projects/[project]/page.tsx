@@ -15,9 +15,9 @@ export default async function Project({ params }: Props) {
 	return (
 
 		<div>
-			<div className="relative">
+			<div className="relative mt-10 px-12">
 				<header className="w-1/2 mb-3 ml-[80px]">
-					<h1 className="text-xl text-white uppercase font-light">
+					<h1 className="text-[40px] text-white uppercase font-light">
 						{project.name}
 					</h1>
 					<div className="mb-3">
@@ -28,7 +28,7 @@ export default async function Project({ params }: Props) {
 						title="View Live Site"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="projectButton left-[80px]">
+						className="projectButton left-[150px]">
 							View {project.name} Live Site
 						</a>
 
@@ -47,7 +47,7 @@ export default async function Project({ params }: Props) {
 
 				<div className="z-10 px-5 mt-[-150px] drop-shadow-[0px_0px_90px_rgba(0,0,0,0.8)]">
 					<Image
-						src={project.listProjectImages}
+						src={project.imagetwo}
 						alt={project.name}
 						width={900}
 						height={508}

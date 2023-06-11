@@ -8,7 +8,7 @@ export default function Footer({ }: Props) {
 
   return (
 
-  <div className="flex flex-col p-3 opacity-60">
+  <div className="footer md:w-2/3 p-3 opacity-60">
     <div className=" relative p-3">
 
     <div className="text-[16px]">
